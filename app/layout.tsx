@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Header from "../components/header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,20 +15,26 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "GHAF",
-  description: "Empowering lives through compassion and service.",
+  description: "Serving Humanity, Transforming Lives",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-50`}
       >
-        {children}
+        {/* Fixed Header */}
+        <Header />
+
+        {/* Page Content Wrapper */}
+        <main className="pt-24"> 
+          {children}
+        </main>
       </body>
     </html>
   );
