@@ -1,15 +1,10 @@
-import ImageBanner from '../components/imageBanner';
+import ImageBanner from './imageBanner';
 import image1 from '../public/freebooks.jpeg';
 import image2 from '../public/foodforblind.jpeg';
 import image3 from '../public/donateingdress.jpeg';
-import type { StaticImageData } from "next/image";
 
 const Programs = () => {
-  const programsData: {
-    image: StaticImageData;
-    title: string;
-    description: string;
-  }[] = [
+  const programsData=[
     {
       image: image1,
       title: "Donate Free Books to Children",
