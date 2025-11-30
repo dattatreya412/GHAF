@@ -13,7 +13,6 @@
     "mongodb": "^7.0.0",
     "mongoose": "^9.0.0",
     "next": "16.0.3",
-    "node": "^25.2.0",
     "razorpay": "^2.9.6",
     "react": "19.2.0",
     "react-dom": "19.2.0",
@@ -27,5 +26,8 @@
     "@types/react-dom": "^19",
     "tailwindcss": "^4",
     "typescript": "^5"
+  },
+  "engines": {
+    "node": "18.x"
   }
 }
